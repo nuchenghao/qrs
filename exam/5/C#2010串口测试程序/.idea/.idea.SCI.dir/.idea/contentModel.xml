@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\nuche\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nuche\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="D:\app_for_qianrushi\实验\C#2010串口测试程序" t="IncludeRecursive">
+      <e p="01-Doc" t="Include">
+        <e p="工程说明.txt" t="Include" />
+        <e p="语言要素.txt" t="Include" />
+      </e>
+      <e p="02-Form" t="Include">
+        <e p="FormSCI.cs" t="Include" />
+        <e p="FormSCI.Designer.cs" t="Include" />
+        <e p="FormSCI.resx" t="Include" />
+      </e>
+      <e p="03-Function" t="Include">
+        <e p="Program.cs" t="Include" />
+        <e p="PublicVar.cs" t="Include" />
+        <e p="SCI.cs" t="Include" />
+      </e>
+      <e p="04-Control" t="Include" />
+      <e p="05-Image" t="Include">
+        <e p="Run.gif" t="Include" />
+        <e p="Run_static.jpg" t="Include" />
+      </e>
+      <e p="06-DataBase" t="Include" />
+      <e p="app.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="Resources" t="Include">
+        <e p="Run.gif" t="Include" />
+        <e p="Run_static.jpg" t="Include" />
+      </e>
+      <e p="SCI.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
