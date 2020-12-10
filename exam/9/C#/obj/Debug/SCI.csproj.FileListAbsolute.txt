@@ -320,3 +320,12 @@ D:\app_for_qianrushi\实验\C#2010串口测试程序\obj\Debug\SerialPort.Proper
 D:\app_for_qianrushi\实验\C#2010串口测试程序\obj\Debug\SCI.csproj.GenerateResource.Cache
 D:\app_for_qianrushi\实验\C#2010串口测试程序\obj\Debug\SerialPort.exe
 D:\app_for_qianrushi\实验\C#2010串口测试程序\obj\Debug\SerialPort.pdb
+D:\app_for_qianrushi\exam\9\C#\bin\Debug\SerialPort.exe.config
+D:\app_for_qianrushi\exam\9\C#\bin\Debug\SerialPort.exe
+D:\app_for_qianrushi\exam\9\C#\bin\Debug\SerialPort.pdb
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SCI.csprojResolveAssemblyReference.cache
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SerialPort.FrmSCI.resources
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SerialPort.Properties.Resources.resources
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SCI.csproj.GenerateResource.Cache
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SerialPort.exe
+D:\app_for_qianrushi\exam\9\C#\obj\Debug\SerialPort.pdb

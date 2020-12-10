@@ -16,133 +16,49 @@ void SecAdd1(uint8_t *p);
 //备    注：进入本程序后，可使用uart_get_re_int函数可再进行中断标志判断
 //          （1-有UART接收中断，0-没有UART接收中断）
 //======================================================================
+
+uint8_t count=0;
+uint8_t order[1024];
+
 void UART_User_Handler(void)
 {
-    uint8_t ch;
-	uint8_t flag,mFlag;
-    uint32_t i;
-    uint8_t a;
-    uint8_t flashRead[2048];
+    uint16_t flag,ch,mflag;
+    uint16_t flashRead[2048];
 
 
 	DISABLE_INTERRUPTS;      //关总中断
-	//------------------------------------------------------------------
-	//接收一个字节
-	//（1）接收一个字节
-	ch = uart_re1(UART_User, &flag);   //调用接收一个字节的函数，清接收中断位
 
-	if(flag==0)  goto UARTA_IRQHandler_Exit;     //若没有成功接收数据，直接退出
-	//（2）调用组帧程序，对接收到的数据组帧
-	gcRecvLen = emuart_recv(ch,gcRecvBuf);         //组帧程序仅当组帧完成时返回非0帧长
-	if(gcRecvLen == 0) goto UARTA_IRQHandler_Exit;//未组帧直接退出，直接退出
-
-    //printf("Enter Isr....\n");
-    if(gcRecvBuf[0]==11&&strncmp((char *)(gcRecvBuf+1),"auart?",6) == 0)
-    {
-        uart_send_string(UART_User,"Yes,I am an emuart!!");                   //与上位机握手，确立通信关系
-        uart_send_string(UART_User,(uint8_t *)MCU_TYPE);
+	ch=uart_re1(UART_User,&flag);
+    if(flag==1){
+        order[count++]=ch;
+        if(ch==' '){
+        	mflag=flash_erase(63);
+        	mflag=flash_write(63, 0 ,count-1,&order);
+        	flash_read_logic(flashRead,63,0,count-1);
+        	uart_sendN(UART_User,count-1,flashRead);
+        	uart_send1(UART_User,'\n');
+			flash_read_physical(flashRead,64512,count-1);
+			uart_sendN(UART_User,count-1,flashRead);
+			count=0;
+        }
     }
-
-	if(gcRecvBuf[0]!=0xFF)
-    {
-
-		   switch(gcRecvBuf[0])
-		   {
-		        case'r':
-
-					flash_read_logic(flashRead,gcRecvBuf[1],(gcRecvBuf[2]<<8)|gcRecvBuf[3],gcRecvBuf[4]);
-					mFlag=1;
-					for(i=0;i<gcRecvBuf[4];i++)   //判空
-					{
-					   if(flashRead[i]!=0xFF)
-					   {
-						   mFlag=0;
-						   break;
-
-					   }
-					}
-
-					if(mFlag==1)
-						uart_send_string(UART_User," selected area is empty\n");
-					else
-						uart_sendN(UART_User,gcRecvBuf[4],flashRead);
-
-//					uart_sendN(UART_User,gcRecvBuf[4],gcRecvBuf);
-
-					//还原标志变量及接收数组
-					memset(gcRecvBuf,0xFF,gcRecvBuf[5]);
-					mFlag=1;
-
-					 break;
-
-				case'a':
-
-					flash_read_physical(flashRead,(gcRecvBuf[1]<<24)|(gcRecvBuf[2]<<16)|(gcRecvBuf[3]<<8)|gcRecvBuf[4],gcRecvBuf[5]);
-//					uart_sendN(UART_User,gcRecvBuf[5],flashRead);
-					mFlag=1;
-					for(i=0;i<gcRecvBuf[5];i++)   //判空
-					{
-					   if(flashRead[i]!=0xFF)
-					   {
-						   mFlag=0;
-						   break;
-
-					   }
-					}
-					if(mFlag==1)
-						uart_send_string(UART_User," selected area is empty\n");
-					else
-					    uart_sendN(UART_User,gcRecvBuf[5],flashRead);
-
-
-					//还原标志变量及接收数组
-					memset(gcRecvBuf,0xFF,gcRecvBuf[5]);
-					mFlag=1;
-
-				 break;
-				case 'w':
-					mFlag=flash_erase(gcRecvBuf[1]);
-					mFlag=flash_write(gcRecvBuf[1], (gcRecvBuf[2]<<8)|gcRecvBuf[3],gcRecvBuf[4],&gcRecvBuf[5]);
-
-					if(mFlag==0)
-						uart_send_string(UART_User,"Write OK！!\n");
-					else
-						uart_send_string(UART_User,"Write error！!\n");
-
-//					uart_sendN(UART_User,gcRecvBuf[5],gcRecvBuf);
-
-					memset(gcRecvBuf,0xFF,gcRecvBuf[5]);
-					mFlag=1;
-
-				 break;
-				case 'e':
-					mFlag=flash_erase(gcRecvBuf[1]);
-//					uart_sendN(UART_User,gcRecvBuf[5],gcRecvBuf);
-
-					if(mFlag==0)
-						uart_send_string(UART_User,"erase OK！!\n");
-					else
-						uart_send_string(UART_User,"erase error！!\n");
-
-
-					//还原标志变量及接收数组
-					memset(gcRecvBuf,0xFF,gcRecvBuf[5]);
-					mFlag=1;
-				 break;
-
-				 default:
-					 //uart_send_string(UART_User,(uint8_t *)MCU_TYPE);
-					 uart_send_string(UART_User,"default test!\n");
-					 break;
-		   }
-
-    }
-	UARTA_IRQHandler_Exit:
-	gcRecvLen = 0;  //恢复接收状态
+		
 
 	//------------------------------------------------------------------
 	ENABLE_INTERRUPTS;       //开总中断
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 //=====================================================================
 //函数名称：SYSTICK_USER_Handler（SysTick定时器中断处理程序）

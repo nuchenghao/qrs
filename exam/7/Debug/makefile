@@ -28,11 +28,11 @@ SRC_CPPList := $(wildcard ./srcc/*.cpp)
 SRC_SList := $(wildcard ./srcs/*.S)
 
 #链接文件(.ld)的存储路径
-linkFile := "C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\03_MCU\linker_file\MKL36Z64xxx4_flash.ld"
+linkFile := "D:\app_for_qianrushi\exam\7\03_MCU\linker_file\MKL36Z64xxx4_flash.ld"
 #定义生成的文件名
-finalGoal := Flash_KL36_20200915
+finalGoal := 7
 #定义头文件所在的路径
-include := -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\.settings" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\01_Doc" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\02_CPU" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\03_MCU" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\04_GEC" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\05_UserBoard" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\06_SoftComponent" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\07_NosPrg" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\Debug" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\03_MCU\linker_file" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\03_MCU\MCU_drivers" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\03_MCU\startup" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\Debug\obj" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\Debug\srcc" -I"C:\Users\lyh\Desktop\CH09-Flash-20200915\Flash_KL36_20200915\Debug\srcs"
+include := -I"D:\app_for_qianrushi\exam\7\.settings" -I"D:\app_for_qianrushi\exam\7\01_Doc" -I"D:\app_for_qianrushi\exam\7\02_CPU" -I"D:\app_for_qianrushi\exam\7\03_MCU" -I"D:\app_for_qianrushi\exam\7\04_GEC" -I"D:\app_for_qianrushi\exam\7\05_UserBoard" -I"D:\app_for_qianrushi\exam\7\06_SoftComponent" -I"D:\app_for_qianrushi\exam\7\07_NosPrg" -I"D:\app_for_qianrushi\exam\7\Debug" -I"D:\app_for_qianrushi\exam\7\03_MCU\linker_file" -I"D:\app_for_qianrushi\exam\7\03_MCU\MCU_drivers" -I"D:\app_for_qianrushi\exam\7\03_MCU\startup" -I"D:\app_for_qianrushi\exam\7\Debug\obj" -I"D:\app_for_qianrushi\exam\7\Debug\srcc" -I"D:\app_for_qianrushi\exam\7\Debug\srcs"
 #定义优化级别。共有O0、O1、O2、Os和Og，默认使用Og
 opt := O0
 #.o文件列表
