@@ -251,8 +251,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./obj/system_MKL36Z4.o
  .data          0x00000000        0x0 ./obj/system_MKL36Z4.o
  .bss           0x00000000        0x0 ./obj/system_MKL36Z4.o
- .data.SystemCoreClock
-                0x00000000        0x4 ./obj/system_MKL36Z4.o
  .debug_macro   0x00000000      0xafc ./obj/system_MKL36Z4.o
  .debug_macro   0x00000000       0x22 ./obj/system_MKL36Z4.o
  .debug_macro   0x00000000       0x4f ./obj/system_MKL36Z4.o
@@ -913,22 +911,14 @@ Discarded input sections
  .bss           0x00000000        0x0 ./obj/uart.o
  .text.uart_deinit
                 0x00000000       0x6c ./obj/uart.o
- .text.uart_init
-                0x00000000      0x148 ./obj/uart.o
  .text.uart_sendN
                 0x00000000       0x34 ./obj/uart.o
- .text.uart_send_string
-                0x00000000       0x2a ./obj/uart.o
  .text.uart_reN
                 0x00000000       0x4a ./obj/uart.o
- .text.uart_enable_re_int
-                0x00000000       0x50 ./obj/uart.o
  .text.uart_disable_re_int
                 0x00000000       0x50 ./obj/uart.o
  .text.uart_get_re_int
                 0x00000000       0x58 ./obj/uart.o
- .data.table_irq_uart
-                0x00000000        0x3 ./obj/uart.o
  .debug_macro   0x00000000      0xafc ./obj/uart.o
  .debug_macro   0x00000000       0x16 ./obj/uart.o
  .debug_macro   0x00000000       0x22 ./obj/uart.o
@@ -1272,7 +1262,7 @@ LOAD d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/t
  .FlashConfig   0x00006c00       0x10 ./obj/startup_MKL36Z4.o
                 0x00006c10                . = ALIGN (0x4)
 
-.text           0x00006c10     0x2b10
+.text           0x00006c10     0x2d8c
                 0x00006c10                . = ALIGN (0x4)
  *(.text)
  .text          0x00006c10       0x48 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
@@ -1421,204 +1411,217 @@ LOAD d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/t
  .text.Test_Acceleration
                 0x00008564       0xa0 ./obj/main.o
                 0x00008564                Test_Acceleration
- .text.main     0x00008604       0x8c ./obj/main.o
+ .text.main     0x00008604       0x9c ./obj/main.o
                 0x00008604                main
  .text.flash_read_physical
-                0x00008690        0x8 ./obj/flash.o
-                0x00008690                flash_read_physical
+                0x000086a0        0x8 ./obj/flash.o
+                0x000086a0                flash_read_physical
  .text.flash_isempty
-                0x00008698       0x1e ./obj/flash.o
-                0x00008698                flash_isempty
- *fill*         0x000086b6        0x2 
+                0x000086a8       0x1e ./obj/flash.o
+                0x000086a8                flash_isempty
+ *fill*         0x000086c6        0x2 
  .text.flash_cmd_launch
-                0x000086b8       0x44 ./obj/flash.o
-                0x000086b8                flash_cmd_launch
+                0x000086c8       0x44 ./obj/flash.o
+                0x000086c8                flash_cmd_launch
  .text.flash_erase
-                0x000086fc       0x68 ./obj/flash.o
-                0x000086fc                flash_erase
+                0x0000870c       0x68 ./obj/flash.o
+                0x0000870c                flash_erase
  .text.flash_write_physical
-                0x00008764       0x54 ./obj/flash.o
-                0x00008764                flash_write_physical
+                0x00008774       0x54 ./obj/flash.o
+                0x00008774                flash_write_physical
  .text.gpio_get_port_pin
-                0x000087b8        0x8 ./obj/gpio.o
-                0x000087b8                gpio_get_port_pin
+                0x000087c8        0x8 ./obj/gpio.o
+                0x000087c8                gpio_get_port_pin
  .text.gpio_set
-                0x000087c0       0x44 ./obj/gpio.o
-                0x000087c0                gpio_set
+                0x000087d0       0x44 ./obj/gpio.o
+                0x000087d0                gpio_set
  .text.gpio_init
-                0x00008804       0x78 ./obj/gpio.o
-                0x00008804                gpio_init
+                0x00008814       0x78 ./obj/gpio.o
+                0x00008814                gpio_init
  .text.adlx345_read1
-                0x0000887c       0x18 ./obj/adlx345.o
-                0x0000887c                adlx345_read1
+                0x0000888c       0x18 ./obj/adlx345.o
+                0x0000888c                adlx345_read1
  .text.adlx345_readN
-                0x00008894       0x20 ./obj/adlx345.o
-                0x00008894                adlx345_readN
+                0x000088a4       0x20 ./obj/adlx345.o
+                0x000088a4                adlx345_readN
  .text.adxl345_start
-                0x000088b4       0x1c ./obj/adlx345.o
-                0x000088b4                adxl345_start
+                0x000088c4       0x1c ./obj/adlx345.o
+                0x000088c4                adxl345_start
  .text.adxl345_write
-                0x000088d0       0x10 ./obj/adlx345.o
-                0x000088d0                adxl345_write
+                0x000088e0       0x10 ./obj/adlx345.o
+                0x000088e0                adxl345_write
  .text.adxl345_wait
-                0x000088e0       0x30 ./obj/adlx345.o
-                0x000088e0                adxl345_wait
+                0x000088f0       0x30 ./obj/adlx345.o
+                0x000088f0                adxl345_wait
  .text.adxl345_get_ack
-                0x00008910       0x14 ./obj/adlx345.o
-                0x00008910                adxl345_get_ack
+                0x00008920       0x14 ./obj/adlx345.o
+                0x00008920                adxl345_get_ack
  .text.adxl345_stop
-                0x00008924       0x1c ./obj/adlx345.o
-                0x00008924                adxl345_stop
+                0x00008934       0x1c ./obj/adlx345.o
+                0x00008934                adxl345_stop
  .text.adlx345_write1
-                0x00008940       0x70 ./obj/adlx345.o
-                0x00008940                adlx345_write1
+                0x00008950       0x70 ./obj/adlx345.o
+                0x00008950                adlx345_write1
  .text.adlx345_Dly_ms
-                0x000089b0       0x18 ./obj/adlx345.o
-                0x000089b0                adlx345_Dly_ms
+                0x000089c0       0x18 ./obj/adlx345.o
+                0x000089c0                adlx345_Dly_ms
  .text.adlx345_init
-                0x000089c8       0xc0 ./obj/adlx345.o
-                0x000089c8                adlx345_init
+                0x000089d8       0xc0 ./obj/adlx345.o
+                0x000089d8                adlx345_init
  .text.Vectors_Init
-                0x00008a88       0x8c ./obj/gec.o
-                0x00008a88                Vectors_Init
+                0x00008a98       0x8c ./obj/gec.o
+                0x00008a98                Vectors_Init
  .text.uart_is_uartNo
-                0x00008b14        0xc ./obj/uart.o
-                0x00008b14                uart_is_uartNo
+                0x00008b24        0xc ./obj/uart.o
+                0x00008b24                uart_is_uartNo
+ .text.uart_init
+                0x00008b30      0x148 ./obj/uart.o
+                0x00008b30                uart_init
  .text.uart_send1
-                0x00008b20       0x5c ./obj/uart.o
-                0x00008b20                uart_send1
+                0x00008c78       0x5c ./obj/uart.o
+                0x00008c78                uart_send1
+ .text.uart_send_string
+                0x00008cd4       0x2a ./obj/uart.o
+                0x00008cd4                uart_send_string
+ *fill*         0x00008cfe        0x2 
  .text.uart_re1
-                0x00008b7c       0x68 ./obj/uart.o
-                0x00008b7c                uart_re1
+                0x00008d00       0x68 ./obj/uart.o
+                0x00008d00                uart_re1
+ .text.uart_enable_re_int
+                0x00008d68       0x50 ./obj/uart.o
+                0x00008d68                uart_enable_re_int
  .text.UART0_IRQHandler
-                0x00008be4       0x28 ./obj/isr.o
-                0x00008be4                UART0_IRQHandler
+                0x00008db8       0xb4 ./obj/isr.o
+                0x00008db8                UART0_IRQHandler
  .text.printk_putc
-                0x00008c0c       0x2a ./obj/printf.o
+                0x00008e6c       0x2a ./obj/printf.o
  .text.printk_mknumstr
-                0x00008c36       0x84 ./obj/printf.o
+                0x00008e96       0x84 ./obj/printf.o
  .text.printk_pad_zero
-                0x00008cba       0x1e ./obj/printf.o
+                0x00008f1a       0x1e ./obj/printf.o
  .text.printk_pad_space
-                0x00008cd8       0x1e ./obj/printf.o
+                0x00008f38       0x1e ./obj/printf.o
  .text.out_char
-                0x00008cf6        0xc ./obj/printf.o
-                0x00008cf6                out_char
- *fill*         0x00008d02        0x2 
+                0x00008f56        0xc ./obj/printf.o
+                0x00008f56                out_char
+ *fill*         0x00008f62        0x2 
  .text.printk_mkfloatstr
-                0x00008d04      0x188 ./obj/printf.o
-                0x00008d04                printk_mkfloatstr
- .text.printk   0x00008e8c      0x560 ./obj/printf.o
-                0x00008e8c                printk
+                0x00008f64      0x188 ./obj/printf.o
+                0x00008f64                printk_mkfloatstr
+ .text.printk   0x000090ec      0x560 ./obj/printf.o
+                0x000090ec                printk
  .text.myprintf
-                0x000093ec       0x24 ./obj/printf.o
-                0x000093ec                myprintf
- .text.memcpy   0x00009410       0x12 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x00009410                memcpy
- .text.memset   0x00009422       0x10 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memset.o)
-                0x00009422                memset
+                0x0000964c       0x24 ./obj/printf.o
+                0x0000964c                myprintf
+ .text.memcpy   0x00009670       0x12 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00009670                memcpy
+ .text.memset   0x00009682       0x10 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memset.o)
+                0x00009682                memset
  *(.rodata)
- *fill*         0x00009432        0x2 
- .rodata        0x00009434       0x40 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(muldf3.o)
+ *fill*         0x00009692        0x2 
+ .rodata        0x00009694       0x40 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(muldf3.o)
  *(.rodata*)
  .rodata.I2C_BASE_TABLE
-                0x00009474        0x8 ./obj/i2c.o
+                0x000096d4        0x8 ./obj/i2c.o
  .rodata.Test_Acceleration.str1.4
-                0x0000947c       0x46 ./obj/main.o
- *fill*         0x000094c2        0x2 
+                0x000096dc       0x46 ./obj/main.o
+ *fill*         0x00009722        0x2 
  .rodata.main.str1.4
-                0x000094c4       0xf9 ./obj/main.o
- *fill*         0x000095bd        0x3 
+                0x00009724       0xf9 ./obj/main.o
+ *fill*         0x0000981d        0x3 
  .rodata.GPIO_ARR
-                0x000095c0       0x14 ./obj/gpio.o
-                0x000095c0                GPIO_ARR
+                0x00009820       0x14 ./obj/gpio.o
+                0x00009820                GPIO_ARR
  .rodata.PORT_ARR
-                0x000095d4       0x14 ./obj/gpio.o
-                0x000095d4                PORT_ARR
+                0x00009834       0x14 ./obj/gpio.o
+                0x00009834                PORT_ARR
  .rodata.I2C_BASE_TABLE
-                0x000095e8        0x8 ./obj/adlx345.o
+                0x00009848        0x8 ./obj/adlx345.o
  .rodata.Vectors_Init.str1.4
-                0x000095f0       0x48 ./obj/gec.o
+                0x00009850       0x48 ./obj/gec.o
  .rodata.UART_ARR
-                0x00009638        0x8 ./obj/uart.o
-                0x00009638                UART_ARR
+                0x00009898        0x8 ./obj/uart.o
+                0x00009898                UART_ARR
+ .rodata.UART0_IRQHandler.str1.4
+                0x000098a0       0x1c ./obj/isr.o
+                                 0x1b (size before relaxing)
  .rodata.printk
-                0x00009640       0xc8 ./obj/printf.o
+                0x000098bc       0xc8 ./obj/printf.o
  *(.glue_7)
- .glue_7        0x00009708        0x0 linker stubs
+ .glue_7        0x00009984        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00009708        0x0 linker stubs
+ .glue_7t       0x00009984        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00009708        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+ .eh_frame      0x00009984        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
  *(.init)
- .init          0x00009708        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crti.o
-                0x00009708                _init
- .init          0x0000970c        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtn.o
+ .init          0x00009984        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crti.o
+                0x00009984                _init
+ .init          0x00009988        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtn.o
  *(.fini)
- .fini          0x00009714        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crti.o
-                0x00009714                _fini
- .fini          0x00009718        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtn.o
-                0x00009720                . = ALIGN (0x4)
+ .fini          0x00009990        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crti.o
+                0x00009990                _fini
+ .fini          0x00009994        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtn.o
+                0x0000999c                . = ALIGN (0x4)
 
-.vfp11_veneer   0x00009720        0x0
- .vfp11_veneer  0x00009720        0x0 linker stubs
+.vfp11_veneer   0x0000999c        0x0
+ .vfp11_veneer  0x0000999c        0x0 linker stubs
 
-.v4_bx          0x00009720        0x0
- .v4_bx         0x00009720        0x0 linker stubs
+.v4_bx          0x0000999c        0x0
+ .v4_bx         0x0000999c        0x0 linker stubs
 
-.iplt           0x00009720        0x0
- .iplt          0x00009720        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+.iplt           0x0000999c        0x0
+ .iplt          0x0000999c        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00009720        0x8
-                0x00009720                __exidx_start = .
+.ARM            0x0000999c        0x8
+                0x0000999c                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x00009720        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
-                0x00009728                __exidx_end = .
+ .ARM.exidx     0x0000999c        0x8 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
+                0x000099a4                __exidx_end = .
 
-.rel.dyn        0x00009728        0x0
- .rel.iplt      0x00009728        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x000099a4        0x0
+ .rel.iplt      0x000099a4        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
 
-.ctors          0x00009728        0x0
-                0x00009728                __CTOR_LIST__ = .
+.ctors          0x000099a4        0x0
+                0x000099a4                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x00009728                __CTOR_END__ = .
+                0x000099a4                __CTOR_END__ = .
 
-.dtors          0x00009728        0x0
-                0x00009728                __DTOR_LIST__ = .
+.dtors          0x000099a4        0x0
+                0x000099a4                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x00009728                __DTOR_END__ = .
+                0x000099a4                __DTOR_END__ = .
 
-.preinit_array  0x00009728        0x0
-                0x00009728                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000099a4        0x0
+                0x000099a4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00009728                PROVIDE (__preinit_array_end, .)
+                0x000099a4                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00009728        0x4
-                0x00009728                PROVIDE (__init_array_start, .)
+.init_array     0x000099a4        0x4
+                0x000099a4                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x00009728        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
-                0x0000972c                PROVIDE (__init_array_end, .)
+ .init_array    0x000099a4        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+                0x000099a8                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000972c        0x4
+.fini_array     0x000099a8        0x4
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000972c        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+ .fini_array    0x000099a8        0x4 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x00009730                __etext = .
-                0x00009730                __DATA_ROM = .
+                0x000099ac                __etext = .
+                0x000099ac                __DATA_ROM = .
 
 .mtb            0x20000400        0x0
                 0x20000400                . = ALIGN (0x8)
@@ -1627,56 +1630,63 @@ LOAD d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/t
                 0x20000400                . = ALIGN (0x8)
                 0x20000400                _mtb_end = .
 
-.data           0x20000400        0x0 load address 0x00009730
+.data           0x20000400        0x8 load address 0x000099ac
                 0x20000400                . = ALIGN (0x4)
                 0x20000400                __DATA_RAM = .
                 0x20000400                __data_start__ = .
  *(.data)
  *(.data*)
+ .data.SystemCoreClock
+                0x20000400        0x4 ./obj/system_MKL36Z4.o
+                0x20000400                SystemCoreClock
+ .data.table_irq_uart
+                0x20000404        0x3 ./obj/uart.o
+                0x20000404                table_irq_uart
  *(.jcr*)
-                0x20000400                . = ALIGN (0x4)
-                0x20000400                __data_end__ = .
-                0x00009730                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x20000408                . = ALIGN (0x4)
+ *fill*         0x20000407        0x1 
+                0x20000408                __data_end__ = .
+                0x000099b4                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
 
-.igot.plt       0x20000400        0x0
- .igot.plt      0x20000400        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+.igot.plt       0x20000408        0x0 load address 0x000099b4
+ .igot.plt      0x20000408        0x0 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
 
-.bss            0x20000400       0x2c
-                0x20000400                . = ALIGN (0x4)
-                0x20000400                __START_BSS = .
-                0x20000400                __bss_start__ = .
+.bss            0x20000408       0x2c load address 0x000099b4
+                0x20000408                . = ALIGN (0x4)
+                0x20000408                __START_BSS = .
+                0x20000408                __bss_start__ = .
  *(.bss)
- .bss           0x20000400       0x1c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
+ .bss           0x20000408       0x1c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x2000041c        0x1 ./obj/i2c.o
-                0x2000041c                ModeSelect
- *fill*         0x2000041d        0x3 
- COMMON         0x20000420        0x8 ./obj/tm1637.o
-                0x20000420                DIO_PIN
-                0x20000422                CLK_PIN
-                0x20000424                component_fun
- COMMON         0x20000428        0x1 ./obj/adlx345.o
-                0x20000428                I2CModule
-                0x2000042c                . = ALIGN (0x4)
- *fill*         0x20000429        0x3 
-                0x2000042c                __bss_end__ = .
-                0x2000042c                __END_BSS = .
+ COMMON         0x20000424        0x1 ./obj/i2c.o
+                0x20000424                ModeSelect
+ *fill*         0x20000425        0x3 
+ COMMON         0x20000428        0x8 ./obj/tm1637.o
+                0x20000428                DIO_PIN
+                0x2000042a                CLK_PIN
+                0x2000042c                component_fun
+ COMMON         0x20000430        0x1 ./obj/adlx345.o
+                0x20000430                I2CModule
+                0x20000434                . = ALIGN (0x4)
+ *fill*         0x20000431        0x3 
+                0x20000434                __bss_end__ = .
+                0x20000434                __END_BSS = .
 
-.heap           0x2000042c      0x204
-                0x20000430                . = ALIGN (0x8)
- *fill*         0x2000042c        0x4 
-                0x20000430                __end__ = .
+.heap           0x20000434      0x204 load address 0x000099e0
+                0x20000438                . = ALIGN (0x8)
+ *fill*         0x20000434        0x4 
+                0x20000438                __end__ = .
                 [!provide]                PROVIDE (end, .)
-                0x20000430                __HeapBase = .
-                0x20000630                . = (. + HEAP_SIZE)
- *fill*         0x20000430      0x200 
-                0x20000630                __HeapLimit = .
+                0x20000438                __HeapBase = .
+                0x20000638                . = (. + HEAP_SIZE)
+ *fill*         0x20000438      0x200 
+                0x20000638                __HeapLimit = .
 
-.stack          0x20000630      0x100
-                0x20000630                . = ALIGN (0x8)
-                0x20000730                . = (. + STACK_SIZE)
- *fill*         0x20000630      0x100 
+.stack          0x20000638      0x100 load address 0x00009be4
+                0x20000638                . = ALIGN (0x8)
+                0x20000738                . = (. + STACK_SIZE)
+ *fill*         0x20000638      0x100 
                 0x20001800                __StackTop = (ORIGIN (m_data) + LENGTH (m_data))
                 0x20001700                __StackLimit = (__StackTop - STACK_SIZE)
                 0x20001800                PROVIDE (__stack, __StackTop)
@@ -1757,21 +1767,21 @@ LOAD d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/t
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(23.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xa538
+.debug_info     0x00000000     0xa798
  .debug_info    0x00000000     0x18dd ./obj/i2c.o
  .debug_info    0x000018dd      0x402 ./obj/system_MKL36Z4.o
  .debug_info    0x00001cdf      0xd43 ./obj/tm1637.o
- .debug_info    0x00002a22      0xc69 ./obj/main.o
- .debug_info    0x0000368b      0xf4b ./obj/flash.o
- .debug_info    0x000045d6     0x11e6 ./obj/gpio.o
- .debug_info    0x000057bc     0x10ad ./obj/adlx345.o
- .debug_info    0x00006869      0xabe ./obj/gec.o
- .debug_info    0x00007327     0x13ea ./obj/uart.o
- .debug_info    0x00008711      0x961 ./obj/isr.o
- .debug_info    0x00009072     0x14a0 ./obj/printf.o
- .debug_info    0x0000a512       0x26 ./obj/startup_MKL36Z4.o
+ .debug_info    0x00002a22      0xcad ./obj/main.o
+ .debug_info    0x000036cf      0xf4b ./obj/flash.o
+ .debug_info    0x0000461a     0x11e6 ./obj/gpio.o
+ .debug_info    0x00005800     0x10ad ./obj/adlx345.o
+ .debug_info    0x000068ad      0xabe ./obj/gec.o
+ .debug_info    0x0000736b     0x13ea ./obj/uart.o
+ .debug_info    0x00008755      0xb7d ./obj/isr.o
+ .debug_info    0x000092d2     0x14a0 ./obj/printf.o
+ .debug_info    0x0000a772       0x26 ./obj/startup_MKL36Z4.o
 
-.debug_abbrev   0x00000000     0x1e32
+.debug_abbrev   0x00000000     0x1e71
  .debug_abbrev  0x00000000      0x3be ./obj/i2c.o
  .debug_abbrev  0x000003be       0xed ./obj/system_MKL36Z4.o
  .debug_abbrev  0x000004ab      0x262 ./obj/tm1637.o
@@ -1781,11 +1791,11 @@ OUTPUT(23.elf elf32-littlearm)
  .debug_abbrev  0x0000104d      0x2e8 ./obj/adlx345.o
  .debug_abbrev  0x00001335      0x224 ./obj/gec.o
  .debug_abbrev  0x00001559      0x399 ./obj/uart.o
- .debug_abbrev  0x000018f2      0x210 ./obj/isr.o
- .debug_abbrev  0x00001b02      0x31c ./obj/printf.o
- .debug_abbrev  0x00001e1e       0x14 ./obj/startup_MKL36Z4.o
+ .debug_abbrev  0x000018f2      0x24f ./obj/isr.o
+ .debug_abbrev  0x00001b41      0x31c ./obj/printf.o
+ .debug_abbrev  0x00001e5d       0x14 ./obj/startup_MKL36Z4.o
 
-.debug_loc      0x00000000     0x2f3b
+.debug_loc      0x00000000     0x2f95
  .debug_loc     0x00000000      0x77f ./obj/i2c.o
  .debug_loc     0x0000077f      0x1d7 ./obj/tm1637.o
  .debug_loc     0x00000956       0xc8 ./obj/main.o
@@ -1794,8 +1804,8 @@ OUTPUT(23.elf elf32-littlearm)
  .debug_loc     0x0000138f      0x3c6 ./obj/adlx345.o
  .debug_loc     0x00001755       0x14 ./obj/gec.o
  .debug_loc     0x00001769      0x58a ./obj/uart.o
- .debug_loc     0x00001cf3       0x1e ./obj/isr.o
- .debug_loc     0x00001d11     0x122a ./obj/printf.o
+ .debug_loc     0x00001cf3       0x78 ./obj/isr.o
+ .debug_loc     0x00001d6b     0x122a ./obj/printf.o
 
 .debug_aranges  0x00000000      0x3d8
  .debug_aranges
@@ -1862,19 +1872,19 @@ OUTPUT(23.elf elf32-littlearm)
  .debug_macro   0x000013da      0x221 ./obj/isr.o
  .debug_macro   0x000015fb      0x1a2 ./obj/printf.o
 
-.debug_line     0x00000000     0x34e2
+.debug_line     0x00000000     0x34f9
  .debug_line    0x00000000      0x589 ./obj/i2c.o
  .debug_line    0x00000589      0x28c ./obj/system_MKL36Z4.o
  .debug_line    0x00000815      0x526 ./obj/tm1637.o
- .debug_line    0x00000d3b      0x4b1 ./obj/main.o
- .debug_line    0x000011ec      0x4f0 ./obj/flash.o
- .debug_line    0x000016dc      0x496 ./obj/gpio.o
- .debug_line    0x00001b72      0x530 ./obj/adlx345.o
- .debug_line    0x000020a2      0x464 ./obj/gec.o
- .debug_line    0x00002506      0x50f ./obj/uart.o
- .debug_line    0x00002a15      0x45b ./obj/isr.o
- .debug_line    0x00002e70      0x604 ./obj/printf.o
- .debug_line    0x00003474       0x6e ./obj/startup_MKL36Z4.o
+ .debug_line    0x00000d3b      0x4b3 ./obj/main.o
+ .debug_line    0x000011ee      0x4f0 ./obj/flash.o
+ .debug_line    0x000016de      0x496 ./obj/gpio.o
+ .debug_line    0x00001b74      0x530 ./obj/adlx345.o
+ .debug_line    0x000020a4      0x464 ./obj/gec.o
+ .debug_line    0x00002508      0x50f ./obj/uart.o
+ .debug_line    0x00002a17      0x470 ./obj/isr.o
+ .debug_line    0x00002e87      0x604 ./obj/printf.o
+ .debug_line    0x0000348b       0x6e ./obj/startup_MKL36Z4.o
 
 .debug_str      0x00000000    0x4ef8d
  .debug_str     0x00000000    0x4df7a ./obj/i2c.o
@@ -1883,20 +1893,20 @@ OUTPUT(23.elf elf32-littlearm)
                               0x4add0 (size before relaxing)
  .debug_str     0x0004dfd6      0x853 ./obj/tm1637.o
                               0x4e833 (size before relaxing)
- .debug_str     0x0004e829       0xb3 ./obj/main.o
-                              0x4e84e (size before relaxing)
- .debug_str     0x0004e8dc      0x1e6 ./obj/flash.o
+ .debug_str     0x0004e829       0xd0 ./obj/main.o
+                              0x4e86b (size before relaxing)
+ .debug_str     0x0004e8f9      0x1e6 ./obj/flash.o
                               0x4e2be (size before relaxing)
- .debug_str     0x0004eac2      0x12b ./obj/gpio.o
+ .debug_str     0x0004eadf      0x12b ./obj/gpio.o
                               0x4e446 (size before relaxing)
- .debug_str     0x0004ebed       0xb2 ./obj/adlx345.o
+ .debug_str     0x0004ec0a       0xb2 ./obj/adlx345.o
                               0x4eab9 (size before relaxing)
- .debug_str     0x0004ec9f       0x51 ./obj/gec.o
+ .debug_str     0x0004ecbc       0x51 ./obj/gec.o
                               0x4e81c (size before relaxing)
- .debug_str     0x0004ecf0      0x116 ./obj/uart.o
+ .debug_str     0x0004ed0d       0xf9 ./obj/uart.o
                               0x4e46c (size before relaxing)
  .debug_str     0x0004ee06        0xb ./obj/isr.o
-                              0x4e7b4 (size before relaxing)
+                              0x4e83d (size before relaxing)
  .debug_str     0x0004ee11      0x156 ./obj/printf.o
                               0x4e439 (size before relaxing)
  .debug_str     0x0004ef67       0x26 ./obj/startup_MKL36Z4.o
@@ -1916,7 +1926,7 @@ OUTPUT(23.elf elf32-littlearm)
  .comment       0x0000007e       0x7f ./obj/isr.o
  .comment       0x0000007e       0x7f ./obj/printf.o
 
-.debug_frame    0x00000000      0xb4c
+.debug_frame    0x00000000      0xb50
  .debug_frame   0x00000000      0x1b4 ./obj/i2c.o
  .debug_frame   0x000001b4       0x20 ./obj/system_MKL36Z4.o
  .debug_frame   0x000001d4       0xc0 ./obj/tm1637.o
@@ -1926,19 +1936,19 @@ OUTPUT(23.elf elf32-littlearm)
  .debug_frame   0x00000538       0xe8 ./obj/adlx345.o
  .debug_frame   0x00000620       0x2c ./obj/gec.o
  .debug_frame   0x0000064c      0x134 ./obj/uart.o
- .debug_frame   0x00000780       0x2c ./obj/isr.o
- .debug_frame   0x000007ac      0x110 ./obj/printf.o
- .debug_frame   0x000008bc       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x000008dc       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_divsi3.o)
- .debug_frame   0x000008fc       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_fixunsdfsi.o)
- .debug_frame   0x00000928       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_fixunsdfdi.o)
- .debug_frame   0x00000954       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00000990       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(eqdf2.o)
- .debug_frame   0x000009c8       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(gedf2.o)
- .debug_frame   0x00000a00       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(ledf2.o)
- .debug_frame   0x00000a38       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(muldf3.o)
- .debug_frame   0x00000a74       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(subdf3.o)
- .debug_frame   0x00000ab0       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(fixdfsi.o)
- .debug_frame   0x00000adc       0x28 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(floatunsidf.o)
- .debug_frame   0x00000b04       0x28 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000b2c       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000780       0x30 ./obj/isr.o
+ .debug_frame   0x000007b0      0x110 ./obj/printf.o
+ .debug_frame   0x000008c0       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000008e0       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000900       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x0000092c       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_fixunsdfdi.o)
+ .debug_frame   0x00000958       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000994       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(eqdf2.o)
+ .debug_frame   0x000009cc       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(gedf2.o)
+ .debug_frame   0x00000a04       0x38 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(ledf2.o)
+ .debug_frame   0x00000a3c       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(muldf3.o)
+ .debug_frame   0x00000a78       0x3c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(subdf3.o)
+ .debug_frame   0x00000ab4       0x2c d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(fixdfsi.o)
+ .debug_frame   0x00000ae0       0x28 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(floatunsidf.o)
+ .debug_frame   0x00000b08       0x28 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000b30       0x20 d:/嵌入式技术app/ahl-gec-ide(4.11)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libg_nano.a(lib_a-memset.o)

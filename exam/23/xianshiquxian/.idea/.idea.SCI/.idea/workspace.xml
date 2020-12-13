@@ -13,8 +13,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/02-Form/FormSCI.cs" />
         <option value="$PROJECT_DIR$/02-Form/FormSCI.Designer.cs" />
+        <option value="$PROJECT_DIR$/03-Function/PublicVar.cs" />
+        <option value="$PROJECT_DIR$/02-Form/FormSCI.cs" />
       </list>
     </option>
   </component>
@@ -67,6 +68,7 @@
       <workItem from="1607784745201" duration="413000" />
       <workItem from="1607785163505" duration="797000" />
       <workItem from="1607790387440" duration="2120000" />
+      <workItem from="1607838012212" duration="9127000" />
     </task>
     <servers />
   </component>
@@ -79,22 +81,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1478" height="4" key="GridCell.Tab.0.bottom" timestamp="1607792511605">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1607847349552">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="4" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607792511605" />
-    <state width="1478" height="4" key="GridCell.Tab.0.center" timestamp="1607792511605">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607847349552" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1607847349551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="4" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607792511605" />
-    <state width="1478" height="4" key="GridCell.Tab.0.left" timestamp="1607792511605">
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607847349551" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1607847349551">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="4" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607792511605" />
-    <state width="1478" height="4" key="GridCell.Tab.0.right" timestamp="1607792511605">
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607847349551" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1607847349552">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1478" height="4" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607792511605" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607847349552" />
     <state x="400" y="105" key="ToolboxManager" timestamp="1607791115688">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

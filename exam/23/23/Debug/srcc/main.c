@@ -34,10 +34,10 @@ int main(void)
     
     //（1.5）用户外设模块初始化
     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);    //初始化蓝灯
-    //uart_init(UART_User,115200);
+    uart_init(UART_User,115200);
     
     //（1.6）使能模块中断
-    //uart_enable_re_int(UART_User);
+    uart_enable_re_int(UART_User);
     //（1.7）【不变】开总中断
     ENABLE_INTERRUPTS;
     

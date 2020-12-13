@@ -549,6 +549,7 @@
             this.chart3.Location = new System.Drawing.Point(1102, 12);
             this.chart3.Name = "chart3";
             series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
             series4.Name = "y";
             this.chart3.Series.Add(series4);
@@ -566,8 +567,9 @@
             this.chart4.Location = new System.Drawing.Point(1047, 378);
             this.chart4.Name = "chart4";
             series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
-            series5.Name = "Series1";
+            series5.Name = "z";
             this.chart4.Series.Add(series5);
             this.chart4.Size = new System.Drawing.Size(865, 396);
             this.chart4.TabIndex = 19;

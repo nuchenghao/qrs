@@ -351,25 +351,30 @@ namespace SerialPort
             byte[] ch2=new byte[2];
             //ComDevice.Encoding = System.Text.Encoding.GetEncoding("GB2312");
 
-
+            
 
 
             //调用串口接收函数,并返回结果
             Flag = sci.SCIReceiveData(ref PublicVar.g_ReceiveByteArray);
                 if (Flag == true)//串口接收数据成功
                 {
-                if (PublicVar.g_ReceiveByteArray.Length >= 2)
+                if (PublicVar.g_ReceiveByteArray.Length >= 3)
                 {
-                    int temp = PublicVar.Temp[0] =  PublicVar.g_ReceiveByteArray[0];
-                    int mcu_temp = PublicVar.Temp[1]  = PublicVar.g_ReceiveByteArray[1];
-
-                    string s1 = " " + temp + "℃";
-
-                    string s2 = " " + mcu_temp + "℃";
+                    int x1=PublicVar.Temp[0] = (byte) PublicVar.g_ReceiveByteArray[0];
+                    int x2=PublicVar.Temp[1]  =(byte)  PublicVar.g_ReceiveByteArray[1];
+                    int y1=PublicVar.Temp[2]  = (byte) PublicVar.g_ReceiveByteArray[2];
+                    int y2=PublicVar.Temp[3]  = (byte) PublicVar.g_ReceiveByteArray[3];
+                    int z1=PublicVar.Temp[4]  =(byte)  PublicVar.g_ReceiveByteArray[4];
+                    int z2=PublicVar.Temp[5]  = (byte) PublicVar.g_ReceiveByteArray[5];
+                    int x = (x1 << 8) + x2;
+                    int y = (y1 << 8) + y2;
+                    string s1 = " " + x1;
+//
+                    string s2 = " " + x2;
 
                     SCIUpdateRevtxtbox(textBox1, s1);
 
-                    SCIUpdateRevtxtbox(textBox2, s2);
+                   SCIUpdateRevtxtbox(textBox2, s2);
                 }
 
                 /*len = PublicVar.g_ReceiveByteArray.Length;
@@ -671,11 +676,13 @@ namespace SerialPort
             //获取5组温度数据以后，描画折线图
             //UpdateChart(buf_temp, mcu_temp);
         }
+
         
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.chart1.Series["temp"].IsValueShownAsLabel = false;
-            this.chart1.Series["mcu"].IsValueShownAsLabel = false;
+            this.chart1.Series["x"].IsValueShownAsLabel = false;
+            this.chart3.Series["y"].IsValueShownAsLabel = false;
+            this.chart4.Series["z"].IsValueShownAsLabel = false;
             PublicVar.g_SendByteArray = new byte[2];
             PublicVar.g_SendByteArray[0] = (byte)'q';
             bool  Flag = sci.SCISendData(ref PublicVar.g_SendByteArray);
@@ -686,11 +693,19 @@ namespace SerialPort
                 this.TSSLState.Text += "数据发送失败!";
             //每隔一秒从mcu获取当前温度
 
-        
-
-            this.chart1.Series["temp"].Points.AddXY(++time , PublicVar.Temp[0]);
-            this.chart1.Series["mcu"].Points.AddXY(time, PublicVar.Temp[1]);
-
+            int x1 = PublicVar.Temp[0];
+            int x2 = PublicVar.Temp[1];
+            int y1 = PublicVar.Temp[2];
+            int y2 = PublicVar.Temp[3];
+            int z1 = PublicVar.Temp[4];
+            int z2 = PublicVar.Temp[5];
+            int x = (x1 << 8) + x2;
+            int y = (y1 << 8) + y2;
+            int z = (z1 << 8) + z2;
+            
+            this.chart1.Series["x"].Points.AddXY(++time , x);
+            this.chart3.Series["y"].Points.AddXY(time, y);
+            this.chart4.Series["z"].Points.AddXY(time, z);
         }
         
         
@@ -735,12 +750,12 @@ namespace SerialPort
 
         private void chart3_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+      
         }
 
         private void chart4_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+         
         }
     }
 }
